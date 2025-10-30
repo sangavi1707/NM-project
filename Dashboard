@@ -1,0 +1,182 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Product Catalog Dashboard</title>  
+  <style>  
+    /* ======== GENERAL STYLES ======== */    
+    * {        box-sizing: border-box;       margin: 0;       padding: 0;       fontfamily: 'Poppins', sans-serif;  
+    }  
+  
+    body {       display: flex;       background-color: #f5f6fa;       min-height: 100vh;       color: 
+#2f3640;  
+    }  
+  
+    /* ======== SIDEBAR ======== */  
+    .sidebar {       width: 240px;       background-color: #273c75;       color: white;       height: 100vh;       position: fixed;       left: 0;       
+top: 0;       padding: 20px 0;  
+    }  
+  
+    .sidebar h2 {       textalign: center;       marginbottom: 30px;       fontsize: 1.4em;       color: 
+#00a8ff;  
+}  
+  
+    .sidebar ul {       liststyle: none;       
+padding: 0;  
+    }  
+  
+    .sidebar ul li {       padding: 15px 20px;       cursor: pointer;       transition: 0.3s;  
+    }  
+  
+    .sidebar ul li:hover {       backgroundcolor: #40739e;  
+    }  
+  
+    .sidebar ul li a {       color: white;       textdecoration: none;       display: block;  
+    }  
+  
+    /* ======== MAIN CONTENT ======== */  
+    .main-content {       margin-left: 240px;       padding: 20px; flex: 1;  
+    }  
+  
+    .header {       background-color: white;       padding: 15px 20px;       border-radius: 10px;       display: flex;       justify-content: space-between;       align-items: center;       box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
+}  
+  
+    .header h1 {       color: #273c75;       font-size: 1.5em;  
+    }  
+  
+    .header button {       background-color: #00a8ff;       color: white;       border: none;       padding: 10px 20px;       border-radius: 5px;       cursor: pointer;       transition: 
+0.3s;  
+    }  
+  
+    .header button:hover {       backgroundcolor: #0097e6;  
+    }  
+  
+    /* ======== DASHBOARD CARDS ======== */  
+    .cards { display: grid;       grid-
+templatecolumns: repeat(auto-
+fit, 
+minmax(220px
+, 1fr));       gap: 
+20px;       
+margin-top: 
+20px;  
+    }  
+  
+.card {       background-color: white;       border-radius: 10px;       padding: 20px;       text-align: center;       box-shadow: 0 2px 
+8px rgba(0,0,0,0.1);       transition: 0.3s;  
+    }  
+  
+    .card:hover {       transform: 
+translateY(-5px);  
+    }  
+  
+    .card h3 {       color: #273c75;       marginbottom: 10px;  
+    }  
+  
+    .card p {       fontsize: 1.2em;       color: #00a8ff;       font-weight: bold;  
+    }  
+  
+    /* ======== PRODUCT TABLE ======== */  
+    .table-section {       margintop: 30px;       background: white; padding: 20px;       border-radius: 10px;       boxshadow: 0 2px 8px 
+rgba(0,0,0,0.1);  
+    }  
+  
+    table {       width: 100%;       border-collapse: collapse;  
+    }  
+  
+th, td {       padding: 12px;       text-align: left;       border-bottom: 
+1px solid #ddd;  
+    }       th 
+{  
+      background-color: #00a8ff;       color: white;  
+    }  
+  
+    tr:hover {       backgroundcolor: #f1f2f6;  
+    }  
+  
+    footer {       textalign: center;       margin-top: 30px;       color: #888;       fontsize: 0.9em;  
+    }  
+  </style>  
+</head>  
+<body>  
+  
+  <!-- ===== SIDEBAR ===== -->  
+  <div class="sidebar">  
+    <h2>Product Admin</h2>  
+    <ul>  
+      <li><a href="#">Dashboard</a></li>  
+      <li><a href="#">Add Product</a></li>  
+      <li><a href="#">Product List</a></li>  
+      <li><a href="#">Orders</a></li>  
+      <li><a href="#">Reports</a></li>  
+      <li><a href="#">Logout</a></li>  
+    </ul>  
+  </div>  
+  
+  <!-- ===== MAIN CONTENT ===== -->  
+  <div class="main-content">  
+    <div class="header">  
+      <h1>Dashboard Overview</h1>  
+      <button>+ Add Product</button>  
+    </div>  
+  
+    <div class="cards">  
+      <div class="card">  
+        <h3>Total Products</h3>  
+        <p>120</p>  
+      </div>  
+      <div class="card">  
+        <h3>Available Stock</h3>  
+        <p>85</p>  
+      </div>  
+      <div class="card">  
+        <h3>Orders</h3>  
+        <p>35</p>  
+      </div>  
+      <div class="card">  
+        <h3>Revenue</h3>  
+        <p>₹1,24,500</p>  
+      </div>  
+    </div>  
+  
+    <div class="table-section">  
+      <h2>Recent Products</h2>  
+      <table>  
+        <thead>  
+          <tr>  
+            <th>Product Name</th>  
+            <th>Category</th>  
+            <th>Price (₹)</th>  
+            <th>Status</th>  
+          </tr>  
+        </thead>  
+        <tbody>  
+          <tr>  
+            <td>Wireless Mouse</td>  
+            <td>Electronics</td>  
+            <td>599</td>  
+            <td>Available</td>  
+          </tr>  
+          <tr>  
+            <td>Bluetooth Speaker</td>  
+            <td>Audio</td>  
+            <td>1299</td>  
+            <td>Out of Stock</td>  
+          </tr>  
+          <tr>  
+            <td>Running Shoes</td>  
+            <td>Footwear</td>  
+            <td>2499</td>  
+            <td>Available</td>            </tr>  
+        </tbody>  
+      </table>  
+    </div>  
+  
+    <footer>  
+      © 2025 Product Catalog | Powered by MongoDB & Node.js  
+    </footer>  
+  </div>  
+  
+</body>  
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Login | Product Catalog</title>  
+  <style>  
+    /* ======= GLOBAL STYLES ======= */  
+    * {       margin: 0;       padding: 0;       box-sizing: border-box;       fontfamily: "Poppins", sans-serif;  
+    }  
+  
+    body {       height: 100vh; background: linear-gradient(135deg, #00a8ff, #9c88ff, #fbc531); display: flex; justify-content: center;       align-items: center;       background-size: 400% 400%;       animation: gradientBG 10s ease infinite;  
+    }  
+  
+    @keyframes gradientBG {  
+      0% { background-position: 0% 50%; }  
+      50% { background-position: 100% 50%; }  
+      100% { background-position: 0% 50%; }  
+    }  
+  
+    /* ======= LOGIN CONTAINER ======= */  
+    .login-container {       background: white;       width: 350px;       padding: 40px 30px;       border-radius: 15px;       box-shadow: 0 8px 
+25px rgba(0, 0, 0, 0.2);       text-align: center;  
+}  
+  
+    .login-container h2 {       margin-bottom: 20px;       color: #273c75;       font-size: 1.8em;       font-weight: 600;  
+    }  
+  
+    .login-container p { color: #555;  
+font-size: 0.9em; margin-bottom: 
+25px;  
+    }  
+  
+    /* ======= INPUT FIELDS ======= */  
+    .input-field {       position: relative;       
+margin-bottom: 20px;  
+    }  
+  
+    .input-field input {       width: 100%;       padding: 
+12px 15px;       border-radius: 
+8px;       border: 2px solid #dcdde1;       font-size: 1em;       outline: none;       transition: all 0.3s;  
+    }  
+  
+.input-field input:focus {       border-color: 
+#00a8ff;       box-shadow: 0 0 8px rgba(0, 168, 
+255, 0.3);  
+    }  
+  
+    /* ======= BUTTON ======= */  
+    .btn {       width: 100%;       background: lineargradient(90deg, #00a8ff, #9c88ff);       color: white;       border: none; padding: 12px;  
+font-size: 1em; borderradius: 8px;       cursor: pointer;       transition: all 
+0.3s;  
+    }  
+  
+    .btn:hover {       background: linear-gradient(90deg, 
+#9c88ff, #00a8ff);       transform: scale(1.03);  
+    }  
+  
+    /* ======= FOOTER TEXT ======= */  
+    .footer-text {       margintop: 20px;       font-size: 
+0.9em;  
+    }  
+  
+    .footer-text a {       color: #00a8ff;       textdecoration: none;       font-weight: 600;  
+    }  
+  
+.footer-text a:hover {       textdecoration: underline;  
+    }  
+  
+    /* ======= RESPONSIVE ======= */  
+    @media (max-width: 400px) {  
+      .login-container {         width: 90%;         padding: 
+30px 20px; }  
+    }  
+  </style>  
+</head>  
+<body>  
+  
+  <div class="login-container">  
+    <h2>Welcome Back 👋</h2>  
+    <p>Login to your Product Catalog dashboard</p>  
+  
+    <form action="/login" method="POST">  
+      <div class="input-field">  
+        <input type="text" name="username" placeholder="Enter Username" required>  
+      </div>  
+  
+      <div class="input-field">  
+        <input type="password" name="password" placeholder="Enter Password" required>  
+      </div>  
+  
+      <button type="submit" class="btn">Login</button>  
+    </form>  
+  
+    <div class="footer-text">  
+      Don’t have an account? <a href="/register">Register here</a>  
+    </div>  
+  </div>  
+  
+</body>  
+</html>
